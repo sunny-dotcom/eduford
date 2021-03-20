@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('images/banner.png');
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 6%;
+}
+.navbar .navlinks ul li{
+    display: inline-block;
+    padding: 0 10px;
+    list-style: none;
+    /* display: inline-block; */
+
+
+}
+.navlinks ul li:after{
+    content: '';
+    position: relative;
+    width: 0;
+    height: 2px;
+    margin: auto;
+    display: block;
+    background: #f44336;
+    transition: 0.5s;
+    
+}
+.navlinks ul li:hover::after{
+    width: 100%;
+}
+.navbar .navlinks ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 14px;
+
+}
+
+.navbar .logo img{
+    width: 150px;
+}
+.text-side{
+    height: 40%;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-align: center;
+    
+}
+.text-side h1{
+    font-size: 60px;
+}
+.text-side p{
+    font-size: 17px;
+    margin-top: 30px;
+    margin-bottom: 64px;
+    
+}
+
+.text-side a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 23px;
+    /* margin-top: 89px; */
+    /* margin: 45px; */
+    /* background: #f44336; */
+    border: 1px solid #fff;
+    transition: 0.5s;
+
+}
+.text-side a:hover{
+    background: #f44336;
+
+
+}
+
+.navbar  i{
+    display: none;
+}
+
+
+@media(max-width:720px){
+    .text-side h1{
+        font-size: 34px;
+
+    }
+    .navlinks{
+        position: absolute;
+        height: 100vh;
+        width:200px;
+        background: #f44336;
+        top: 0;
+        right:-200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    .navbar .navlinks ul li{
+        display: block;
+        margin:23px 0;
+    }
+    
+    .navbar  i{
+        display: block;
+        font-size: 23px;
+        margin:10px;
+        color:#fff;
+        cursor: pointer;
+    }
+    .navbar .fa-bars{
+        margin-bottom: 34px;
+        /* position: absolute; */
+    }
+
+}
